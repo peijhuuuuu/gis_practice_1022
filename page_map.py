@@ -9,8 +9,17 @@ url ="https://naciscdn.org/naturalearth/110m/cultural/ne_110m_admin_0_countries.
 gdf = gpd.read_file(url)
 
 st.dataframe(gdf.head())
+basemap_options = [
+    "OpenStreetMap",
+    "OpenTopoMap",
+    "Esri.WorldImagery",
+    "CartoDB.Positron",
+    "Stamen.Terrain",
+    "Stamen.TonerLite"
+]
+selected_basemap = st.selectbox("選擇底圖", basemap_options, index=1)
 m = leafmap.Map(center=[24.0, 121.0], zoom=7) 
-m.add_basemap("OpenTopoMap")
+m.add_basemap(selected_basemap)
 
 m.add_gdf(
  gdf,

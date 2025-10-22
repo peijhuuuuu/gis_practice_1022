@@ -2,7 +2,7 @@ import streamlit as st
 import leafmap.foliumap as leafmap
 import geopandas as gpd # / GeoPandas
 st.set_page_config(layout="wide")
-st.title("Leafmap + GeoPandas (Uß)")
+st.title("Leafmap + GeoPandas (向量)")
 
 url ="https://naciscdn.org/naturalearth/110m/cultural/ne_110m_admin_0_countries.zip"
 
@@ -14,7 +14,7 @@ m = leafmap.Map(center=[0, 0])
 
 m.add_gdf(
  gdf,
- layer_name="_} (Vector)",
+ layer_name="全球國界(Vector)",
  style={"fillOpacity": 0, "color": "black", "weight": 0.5}, # ún}
  highlight=False
 )

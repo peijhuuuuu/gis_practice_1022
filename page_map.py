@@ -1,6 +1,6 @@
 import streamlit as st
 import leafmap.foliumap as leafmap
-import geopandas as gpd # / GeoPandas
+import geopandas as gpd 
 st.set_page_config(layout="wide")
 st.title("Leafmap + GeoPandas (向量)")
 
@@ -9,8 +9,8 @@ url ="https://naciscdn.org/naturalearth/110m/cultural/ne_110m_admin_0_countries.
 gdf = gpd.read_file(url)
 
 st.dataframe(gdf.head())
-
-m = leafmap.Map(center=[0, 0])
+m = leafmap.Map(center=[24.0, 121.0], zoom=7) 
+m.add_basemap("OpenTopoMap")
 
 m.add_gdf(
  gdf,

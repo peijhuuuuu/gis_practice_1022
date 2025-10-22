@@ -14,8 +14,6 @@ basemap_options = [
     "OpenTopoMap",
     "Esri.WorldImagery",
     "CartoDB.Positron",
-    "Stamen.Terrain",
-    "Stamen.TonerLite"
 ]
 selected_basemap = st.selectbox("選擇底圖", basemap_options, index=1)
 m = leafmap.Map(center=[24.0, 121.0], zoom=7) 

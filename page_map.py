@@ -4,9 +4,7 @@ import geopandas as gpd # / GeoPandas
 st.set_page_config(layout="wide")
 st.title("Leafmap + GeoPandas (Uß)")
 
-url =
-"https://naciscdn.org/naturalearth/110m/cultural/ne_110m_admin_0_countries.zi
-p"
+url ="https://naciscdn.org/naturalearth/110m/cultural/ne_110m_admin_0_countries.zip"
 
 gdf = gpd.read_file(url)
 
